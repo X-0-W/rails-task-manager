@@ -1,9 +1,7 @@
-<% if task.completed %>
-  <p> <%=  link_to 'completed',
-  complete_path(task),
-  method: :patch %> </p>
-<% else %>
-  <p> <%=  link_to 'incomplete',
-  complete_path(task),
-  method: :patch %> </p>
+<%=  link_to complete_path(task), method: :patch do %>
+  <% if task.completed %>
+        <i class="fa-regular fa-square-check"></i>
+  <% else %>
+      <i class="fa-regular fa-square"></i>
+  <% end %>
 <% end %>
