@@ -1,0 +1,9 @@
+<% if task.completed %>
+  <p> <%=  link_to 'completed',
+  complete_path(task),
+  method: :patch %> </p>
+<% else %>
+  <p> <%=  link_to 'incomplete',
+  complete_path(task),
+  method: :patch %> </p>
+<% end %>
